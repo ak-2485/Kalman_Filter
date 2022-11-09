@@ -1,0 +1,137 @@
+DIGEST a970b3dc63b2c2ee10d2afe38af9a3b5
+Fweight_spec
+R24:29 Coq.ZArith.ZArith <> <> lib
+R31:35 Coq.Reals.Reals <> <> lib
+R37:41 Coq.micromega.Psatz <> <> lib
+R71:76 Flocq3.IEEE754.Binary <> <> lib
+R78:81 Flocq3.IEEE754.Bits <> <> lib
+R83:86 Flocq3.Core.Core <> <> lib
+R122:134 compcert.lib.IEEE754_extra <> <> lib
+R162:165 Coq.Lists.List <> <> lib
+R175:187 Coq.Lists.List ListNotations <> mod
+R207:220 vcfloat.FPCore <> <> lib
+R222:234 vcfloat.Reify <> <> lib
+R236:258 vcfloat.Float_notations <> <> lib
+sec 344:351 <> WITHNANS
+R369:372 vcfloat.FPCore <> Nans class
+binder 363:366 <> NANS:1
+sec 385:388 WITHNANS Util
+var 403:403 WITHNANS.Util A
+var 405:405 WITHNANS.Util B
+def 427:434 <> fold_map
+R442:445 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R441:441 weight_spec <> WITHNANS.Util.A var
+R447:450 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R446:446 weight_spec <> WITHNANS.Util.B var
+R451:451 weight_spec <> WITHNANS.Util.A var
+binder 437:437 <> f:4
+R459:459 weight_spec <> WITHNANS.Util.A var
+binder 455:455 <> a:5
+R468:471 Coq.Init.Datatypes <> list ind
+R473:473 weight_spec <> WITHNANS.Util.B var
+binder 463:464 <> bs:6
+R478:481 Coq.Init.Datatypes <> list ind
+R483:483 weight_spec <> WITHNANS.Util.A var
+R498:499 weight_spec <> bs:6 var
+R512:513 Coq.Lists.List ListNotations ::list_scope:'['_']' not
+R518:519 Coq.Lists.List ListNotations ::list_scope:'['_']' not
+R528:529 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R552:552 weight_spec <> f:4 var
+R554:554 weight_spec <> a:5 var
+binder 546:547 <> a':9
+R569:572 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R567:568 weight_spec <> a':9 var
+R573:580 weight_spec <> fold_map:7 def
+R587:588 weight_spec <> bs:6 var
+R584:585 weight_spec <> a':9 var
+R582:582 weight_spec <> f:4 var
+R603:606 weight_spec WITHNANS.Util <> sec
+R620:627 weight_spec <> fold_map def
+R620:627 weight_spec <> fold_map def
+def 656:666 <> filter_step
+R673:677 vcfloat.FPCore <> ftype def
+R679:685 vcfloat.FPCore <> Tdouble def
+binder 669:669 <> i:10
+R693:697 vcfloat.FPCore <> ftype def
+R699:705 vcfloat.FPCore <> Tdouble def
+binder 689:689 <> g:11
+R713:717 vcfloat.FPCore <> ftype def
+R719:725 vcfloat.FPCore <> Tdouble def
+binder 709:709 <> m:12
+R730:734 vcfloat.FPCore <> ftype def
+R736:742 vcfloat.FPCore <> Tdouble def
+R750:752 vcfloat.FPCore <> ::float64_scope:x_'+'_x not
+R749:749 weight_spec <> g:11 var
+R753:753 vcfloat.FPCore <> ::float64_scope:x_'*'_x not
+R759:763 vcfloat.FPCore <> ::float64_scope:x_'*'_x not
+R769:769 vcfloat.FPCore <> ::float64_scope:x_'*'_x not
+R755:757 vcfloat.FPCore <> ::float64_scope:x_'/'_x not
+R758:758 weight_spec <> i:10 var
+R765:767 vcfloat.FPCore <> ::float64_scope:x_'-'_x not
+R764:764 weight_spec <> m:12 var
+R768:768 weight_spec <> g:11 var
+def 784:796 <> alpha_filter'
+R807:811 vcfloat.FPCore <> ftype def
+R813:819 vcfloat.FPCore <> Tdouble def
+binder 799:803 <> guess:13
+R844:847 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R824:827 Coq.Init.Datatypes <> list ind
+R830:834 vcfloat.FPCore <> ftype def
+R836:842 vcfloat.FPCore <> Tdouble def
+R848:851 Coq.Init.Datatypes <> list ind
+R867:869 Coq.Init.Datatypes <> ::type_scope:x_'*'_x not
+R854:858 vcfloat.FPCore <> ftype def
+R860:866 vcfloat.FPCore <> Tdouble def
+R870:874 vcfloat.FPCore <> ftype def
+R876:882 vcfloat.FPCore <> Tdouble def
+R890:897 weight_spec <> fold_map def
+R973:973 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R975:976 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R982:982 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R977:981 weight_spec <> guess:13 var
+R905:905 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R907:907 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R909:909 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+binder 908:908 <> g:14
+binder 906:906 <> i:15
+binder 905:909 <> pat:16
+binder 911:911 <> m:17
+R932:934 vcfloat.FPCore <> ::float64_scope:x_'+'_x not
+R931:931 weight_spec <> i:15 var
+binder 924:925 <> i':18
+R945:945 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R948:949 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R968:968 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R946:947 weight_spec <> i':18 var
+R950:960 weight_spec <> filter_step def
+R962:963 weight_spec <> i':18 var
+R965:965 weight_spec <> g:14 var
+R967:967 weight_spec <> m:17 var
+def 995:1006 <> alpha_filter
+R1017:1021 vcfloat.FPCore <> ftype def
+R1023:1029 vcfloat.FPCore <> Tdouble def
+binder 1009:1013 <> guess:19
+R1037:1041 vcfloat.FPCore <> ftype def
+R1043:1049 vcfloat.FPCore <> Tdouble def
+binder 1033:1033 <> i:20
+R1058:1061 Coq.Init.Datatypes <> list ind
+R1064:1068 vcfloat.FPCore <> ftype def
+R1070:1076 vcfloat.FPCore <> Tdouble def
+binder 1053:1054 <> ns:21
+R1082:1086 vcfloat.FPCore <> ftype def
+R1088:1094 vcfloat.FPCore <> Tdouble def
+R1107:1108 weight_spec <> ns:21 var
+R1119:1120 Coq.Lists.List ListNotations ::list_scope:'['_']' not
+R1125:1129 weight_spec <> guess:19 var
+R1136:1137 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1161:1163 vcfloat.FPCore <> ::float64_scope:x_'+'_x not
+R1160:1160 weight_spec <> i:20 var
+binder 1153:1154 <> i':24
+R1188:1198 weight_spec <> filter_step def
+R1200:1201 weight_spec <> i':24 var
+R1203:1207 weight_spec <> guess:19 var
+binder 1178:1183 <> guess':25
+R1218:1229 weight_spec <> alpha_filter:22 def
+R1238:1239 weight_spec <> i':24 var
+R1231:1236 weight_spec <> guess':25 var
+R1539:1546 weight_spec WITHNANS <> sec

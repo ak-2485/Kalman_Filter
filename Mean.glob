@@ -1,0 +1,439 @@
+DIGEST 92177b76fa6d8504df4309c6a7edb485
+FMean
+R28:33 vcfloat.FPLang <> <> lib
+R35:43 vcfloat.FPLangOpt <> <> lib
+R45:48 vcfloat.RAux <> <> lib
+R50:57 vcfloat.Rounding <> <> lib
+R59:63 vcfloat.Reify <> <> lib
+R65:79 vcfloat.Float_notations <> <> lib
+R81:88 vcfloat.Automate <> <> lib
+R106:126 IntervalFlocq3.Tactic <> <> lib
+R136:141 Flocq3.IEEE754.Binary <> <> mod
+R143:147 Coq.Reals.Reals <> <> mod
+R149:152 Coq.Lists.List <> <> mod
+R154:166 Coq.Lists.List ListNotations <> mod
+R168:180 Coq.micromega.Lra <> <> mod
+def 215:217 <> sum
+R227:230 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R221:224 Coq.Init.Datatypes <> list ind
+R226:226 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R231:231 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R238:247 Coq.Lists.List <> fold_right def
+R249:253 Coq.Reals.Rdefinitions RbaseSymbolsImpl Rplus defax
+def 270:273 <> mean
+R281:284 Coq.Init.Datatypes <> list ind
+R286:286 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 276:277 <> ms:1
+R291:291 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R304:306 Coq.Reals.Rdefinitions <> ::R_scope:x_'/'_x not
+R298:300 Mean <> sum def
+R302:303 Mean <> ms:1 var
+R307:309 Coq.Reals.Raxioms <> INR def
+R312:317 Coq.Init.Datatypes <> length def
+R319:320 Mean <> ms:1 var
+def 336:347 <> mean_R_step'
+R357:357 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 350:351 <> mu:2
+binder 353:353 <> m:3
+R365:367 Coq.Init.Datatypes <> nat ind
+binder 361:361 <> n:4
+R372:372 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R381:383 Coq.Reals.Rdefinitions <> ::R_scope:x_'+'_x not
+R379:380 Mean <> mu:2 var
+R384:384 Coq.Reals.Rdefinitions <> ::R_scope:x_'/'_x not
+R391:395 Coq.Reals.Rdefinitions <> ::R_scope:x_'/'_x not
+R405:405 Coq.Reals.Rdefinitions <> ::R_scope:x_'/'_x not
+R386:388 Coq.Reals.Rdefinitions <> ::R_scope:x_'-'_x not
+R385:385 Mean <> m:3 var
+R389:390 Mean <> mu:2 var
+R397:399 Coq.Reals.Rdefinitions <> ::R_scope:x_'+'_x not
+R400:402 Coq.Reals.Raxioms <> INR def
+R404:404 Mean <> n:4 var
+def 420:430 <> mean_R_step
+R441:441 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 433:434 <> mu:5
+binder 436:436 <> m:6
+binder 438:438 <> n:7
+R446:446 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R455:457 Coq.Reals.Rdefinitions <> ::R_scope:x_'+'_x not
+R453:454 Mean <> mu:5 var
+R458:458 Coq.Reals.Rdefinitions <> ::R_scope:x_'/'_x not
+R465:469 Coq.Reals.Rdefinitions <> ::R_scope:x_'/'_x not
+R476:476 Coq.Reals.Rdefinitions <> ::R_scope:x_'/'_x not
+R460:462 Coq.Reals.Rdefinitions <> ::R_scope:x_'-'_x not
+R459:459 Mean <> m:6 var
+R463:464 Mean <> mu:5 var
+R471:474 Coq.Reals.Rdefinitions <> ::R_scope:x_'+'_x not
+R475:475 Mean <> n:7 var
+prf 486:494 <> mean_cons
+binder 507:507 <> m:8
+binder 509:510 <> ms:9
+R529:535 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R517:520 Mean <> mean def
+R524:525 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R523:523 Mean <> m:8 var
+R526:527 Mean <> ms:9 var
+R536:546 Mean <> mean_R_step def
+R549:552 Mean <> mean def
+R554:555 Mean <> ms:9 var
+R558:558 Mean <> m:8 var
+R561:563 Coq.Reals.Raxioms <> INR def
+R566:571 Coq.Init.Datatypes <> length def
+R573:574 Mean <> ms:9 var
+R610:613 Mean <> mean def
+R616:626 Mean <> mean_R_step def
+R709:711 Mean <> sum def
+R715:716 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R718:719 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R738:740 Coq.Reals.Rdefinitions <> ::R_scope:x_'+'_x not
+R741:743 Mean <> sum def
+R747:748 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R709:711 Mean <> sum def
+R715:716 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R718:719 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R738:740 Coq.Reals.Rdefinitions <> ::R_scope:x_'+'_x not
+R741:743 Mean <> sum def
+R747:748 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R789:791 Coq.Reals.Raxioms <> INR def
+R794:799 Coq.Init.Datatypes <> length def
+R803:804 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R806:807 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R827:829 Coq.Reals.Rdefinitions <> ::R_scope:x_'+'_x not
+R830:832 Coq.Reals.Raxioms <> INR def
+R835:840 Coq.Init.Datatypes <> length def
+R844:845 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R789:791 Coq.Reals.Raxioms <> INR def
+R794:799 Coq.Init.Datatypes <> length def
+R803:804 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R806:807 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R827:829 Coq.Reals.Rdefinitions <> ::R_scope:x_'+'_x not
+R830:832 Coq.Reals.Raxioms <> INR def
+R835:840 Coq.Init.Datatypes <> length def
+R844:845 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R888:890 Coq.Reals.Rdefinitions <> ::R_scope:x_'<'_x not
+R891:893 Coq.Reals.Raxioms <> INR def
+R896:901 Coq.Init.Datatypes <> length def
+R905:906 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R929:936 Coq.Reals.RIneq <> lt_0_INR thm
+R888:890 Coq.Reals.Rdefinitions <> ::R_scope:x_'<'_x not
+R891:893 Coq.Reals.Raxioms <> INR def
+R896:901 Coq.Init.Datatypes <> length def
+R905:906 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R929:936 Coq.Reals.RIneq <> lt_0_INR thm
+ind 997:1006 <> mean_rel_R
+constr 1043:1056 <> mean_rel_R_nil
+constr 1080:1094 <> mean_rel_R_cons
+R1013:1013 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 1009:1009 <> g:10
+R1024:1027 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1018:1021 Coq.Init.Datatypes <> list ind
+R1023:1023 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R1029:1032 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1028:1028 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R1060:1069 Mean <> mean_rel_R:11 ind
+R1076:1076 Mean <> g:10 var
+R1073:1074 Coq.Lists.List ListNotations ::list_scope:'['_']' not
+R1071:1071 Mean <> g:10 var
+binder 1105:1106 <> mu:13
+binder 1108:1108 <> m:14
+binder 1110:1111 <> ms:15
+R1136:1143 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1118:1127 Mean <> mean_rel_R:11 ind
+R1134:1135 Mean <> mu:13 var
+R1131:1132 Mean <> ms:15 var
+R1129:1129 Mean <> g:10 var
+R1144:1153 Mean <> mean_rel_R:11 ind
+R1166:1176 Mean <> mean_R_step def
+R1178:1179 Mean <> mu:13 var
+R1181:1181 Mean <> m:14 var
+R1184:1186 Coq.Reals.Raxioms <> INR def
+R1189:1194 Coq.Init.Datatypes <> length def
+R1196:1197 Mean <> ms:15 var
+R1159:1160 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1158:1158 Mean <> m:14 var
+R1161:1162 Mean <> ms:15 var
+R1155:1155 Mean <> g:10 var
+prf 1212:1229 <> mean_rel_correct_1
+binder 1242:1242 <> g:16
+binder 1244:1244 <> m:17
+binder 1246:1247 <> ms:18
+R1250:1259 Mean <> mean_rel_R ind
+R1261:1261 Mean <> g:16 var
+R1265:1266 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1264:1264 Mean <> m:17 var
+R1267:1268 Mean <> ms:18 var
+R1272:1275 Mean <> mean def
+R1279:1280 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1278:1278 Mean <> m:17 var
+R1281:1282 Mean <> ms:18 var
+R1374:1377 Mean <> mean def
+R1380:1382 Mean <> sum def
+R1405:1405 Coq.Reals.Rdefinitions <> ::R_scope:x_'/'_x not
+R1411:1414 Coq.Reals.Rdefinitions <> ::R_scope:x_'/'_x not
+R1407:1409 Coq.Reals.Rdefinitions <> ::R_scope:x_'+'_x not
+R1424:1434 Mean <> mean_R_step def
+R1405:1405 Coq.Reals.Rdefinitions <> ::R_scope:x_'/'_x not
+R1411:1414 Coq.Reals.Rdefinitions <> ::R_scope:x_'/'_x not
+R1407:1409 Coq.Reals.Rdefinitions <> ::R_scope:x_'+'_x not
+R1424:1434 Mean <> mean_R_step def
+R1479:1489 Mean <> mean_R_step def
+R1520:1528 Mean <> mean_cons thm
+R1520:1528 Mean <> mean_cons thm
+R1520:1528 Mean <> mean_cons thm
+prf 1578:1595 <> mean_rel_correct_2
+binder 1608:1608 <> g:19
+binder 1610:1610 <> m:20
+binder 1612:1613 <> ms:21
+binder 1615:1616 <> mu:22
+R1646:1649 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1623:1632 Mean <> mean_rel_R ind
+R1634:1634 Mean <> g:19 var
+R1638:1639 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1637:1637 Mean <> m:20 var
+R1640:1641 Mean <> ms:21 var
+R1644:1645 Mean <> mu:22 var
+R1662:1664 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1650:1653 Mean <> mean def
+R1657:1658 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1656:1656 Mean <> m:20 var
+R1659:1660 Mean <> ms:21 var
+R1665:1666 Mean <> mu:22 var
+R1826:1829 Mean <> mean def
+R1832:1842 Mean <> mean_R_step def
+R1875:1883 Mean <> mean_cons thm
+R1875:1883 Mean <> mean_cons thm
+R1875:1883 Mean <> mean_cons thm
+R1930:1940 Mean <> mean_R_step def
+prf 2001:2016 <> mean_rel_correct
+binder 2029:2029 <> g:23
+binder 2031:2031 <> m:24
+binder 2033:2034 <> ms:25
+binder 2036:2037 <> mu:26
+R2067:2071 Coq.Init.Logic <> ::type_scope:x_'<->'_x not
+R2044:2053 Mean <> mean_rel_R ind
+R2055:2055 Mean <> g:23 var
+R2059:2060 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2058:2058 Mean <> m:24 var
+R2061:2062 Mean <> ms:25 var
+R2065:2066 Mean <> mu:26 var
+R2084:2086 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2072:2075 Mean <> mean def
+R2079:2080 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2078:2078 Mean <> m:24 var
+R2081:2082 Mean <> ms:25 var
+R2087:2088 Mean <> mu:26 var
+R2123:2140 Mean <> mean_rel_correct_2 thm
+R2123:2140 Mean <> mean_rel_correct_2 thm
+R2177:2194 Mean <> mean_rel_correct_1 thm
+R2177:2194 Mean <> mean_rel_correct_1 thm
+sec 2223:2230 <> WithNANS
+R2248:2251 vcfloat.FPCore <> Nans class
+binder 2242:2245 <> NANS:27
+def 2267:2278 <> mean_F_step'
+R2288:2292 vcfloat.FPCore <> ftype def
+R2294:2300 vcfloat.FPCore <> Tsingle def
+binder 2281:2282 <> mu:28
+binder 2284:2284 <> m:29
+R2308:2310 Coq.Init.Datatypes <> nat ind
+binder 2304:2304 <> n:30
+R2315:2319 vcfloat.FPCore <> ftype def
+R2321:2327 vcfloat.FPCore <> Tsingle def
+R2343:2348 vcfloat.FPCore <> Zconst def
+R2350:2356 vcfloat.FPCore <> Tsingle def
+R2359:2366 Coq.ZArith.BinInt Z of_nat def
+R2368:2368 Mean <> n:30 var
+binder 2338:2338 <> l:31
+R2379:2381 vcfloat.FPCore <> ::float32_scope:x_'+'_x not
+R2377:2378 Mean <> mu:28 var
+R2382:2382 vcfloat.FPCore <> ::float32_scope:x_'/'_x not
+R2389:2393 vcfloat.FPCore <> ::float32_scope:x_'/'_x not
+R2399:2399 vcfloat.FPCore <> ::float32_scope:x_'/'_x not
+R2384:2386 vcfloat.FPCore <> ::float32_scope:x_'-'_x not
+R2383:2383 Mean <> m:29 var
+R2387:2388 Mean <> mu:28 var
+R2395:2397 vcfloat.FPCore <> ::float32_scope:x_'+'_x not
+R2398:2398 Mean <> l:31 var
+def 2419:2429 <> mean_F_step
+R2440:2444 vcfloat.FPCore <> ftype def
+R2446:2452 vcfloat.FPCore <> Tsingle def
+binder 2432:2433 <> mu:32
+binder 2435:2435 <> m:33
+binder 2437:2437 <> n:34
+R2458:2462 vcfloat.FPCore <> ftype def
+R2464:2470 vcfloat.FPCore <> Tsingle def
+R2480:2482 vcfloat.FPCore <> ::float32_scope:x_'+'_x not
+R2478:2479 Mean <> mu:32 var
+R2483:2483 vcfloat.FPCore <> ::float32_scope:x_'/'_x not
+R2490:2494 vcfloat.FPCore <> ::float32_scope:x_'/'_x not
+R2500:2500 vcfloat.FPCore <> ::float32_scope:x_'/'_x not
+R2485:2487 vcfloat.FPCore <> ::float32_scope:x_'-'_x not
+R2484:2484 Mean <> m:33 var
+R2488:2489 Mean <> mu:32 var
+R2496:2498 vcfloat.FPCore <> ::float32_scope:x_'+'_x not
+R2499:2499 Mean <> n:34 var
+ind 2519:2528 <> mean_rel_F
+constr 2603:2616 <> mean_rel_F_nil
+constr 2640:2654 <> mean_rel_F_cons
+R2535:2539 vcfloat.FPCore <> ftype def
+R2541:2547 vcfloat.FPCore <> Tsingle def
+binder 2531:2531 <> g:35
+R2572:2575 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2552:2555 Coq.Init.Datatypes <> list ind
+R2558:2562 vcfloat.FPCore <> ftype def
+R2564:2570 vcfloat.FPCore <> Tsingle def
+R2589:2592 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2576:2580 vcfloat.FPCore <> ftype def
+R2582:2588 vcfloat.FPCore <> Tsingle def
+R2620:2629 Mean <> mean_rel_F:36 ind
+R2636:2636 Mean <> g:35 var
+R2633:2634 Coq.Lists.List ListNotations ::list_scope:'['_']' not
+R2631:2631 Mean <> g:35 var
+binder 2665:2666 <> mu:38
+binder 2668:2668 <> m:39
+binder 2670:2671 <> ms:40
+R2696:2703 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2678:2687 Mean <> mean_rel_F:36 ind
+R2694:2695 Mean <> mu:38 var
+R2691:2692 Mean <> ms:40 var
+R2689:2689 Mean <> g:35 var
+R2704:2713 Mean <> mean_rel_F:36 ind
+R2726:2736 Mean <> mean_F_step def
+R2738:2739 Mean <> mu:38 var
+R2741:2741 Mean <> m:39 var
+R2744:2749 vcfloat.FPCore <> Zconst def
+R2751:2757 vcfloat.FPCore <> Tsingle def
+R2760:2767 Coq.ZArith.BinInt Z of_nat def
+R2770:2775 Coq.Init.Datatypes <> length def
+R2777:2778 Mean <> ms:40 var
+R2719:2720 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2718:2718 Mean <> m:39 var
+R2721:2722 Mean <> ms:40 var
+R2715:2715 Mean <> g:35 var
+sec 2795:2807 WithNANS ErrorAnalysis
+var 2820:2822 WithNANS.ErrorAnalysis eps
+R2826:2826 Coq.Reals.Rdefinitions RbaseSymbolsImpl R defax
+prf 2899:2913 <> mean_step_bound
+binder 2926:2927 <> mu:42
+binder 2929:2932 <> mu_f:43
+binder 2934:2934 <> m:44
+binder 2936:2936 <> n:45
+R2954:2956 Coq.Reals.Raxioms <> INR def
+R2958:2958 Mean <> n:45 var
+binder 2947:2949 <> n'':46
+R2977:2982 vcfloat.FPCore <> Zconst def
+R2984:2990 vcfloat.FPCore <> Tsingle def
+R2993:3000 Coq.ZArith.BinInt Z of_nat def
+R3002:3002 Mean <> n:45 var
+binder 2971:2972 <> n':47
+R3078:3081 Coq.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R3013:3016 Coq.Reals.Rbasic_fun <> Rabs def
+R3046:3048 Coq.Reals.Rdefinitions <> ::R_scope:x_'-'_x not
+R3019:3029 Mean <> mean_R_step def
+R3031:3032 Mean <> mu:42 var
+R3035:3038 vcfloat.FPCore <> FT2R def
+R3040:3040 Mean <> m:44 var
+R3043:3045 Mean <> n'':46 var
+R3049:3052 vcfloat.FPCore <> FT2R def
+R3055:3065 Mean <> mean_F_step def
+R3067:3070 Mean <> mu_f:43 var
+R3072:3072 Mean <> m:44 var
+R3074:3075 Mean <> n':47 var
+R3103:3105 Coq.Reals.Rdefinitions <> ::R_scope:x_'+'_x not
+R3082:3085 Coq.Reals.Rbasic_fun <> Rabs def
+R3090:3092 Coq.Reals.Rdefinitions <> ::R_scope:x_'-'_x not
+R3088:3089 Mean <> mu:42 var
+R3093:3096 vcfloat.FPCore <> FT2R def
+R3098:3101 Mean <> mu_f:43 var
+R3106:3108 Mean <> WithNANS.ErrorAnalysis.eps var
+R3152:3162 Mean <> mean_R_step def
+R3165:3175 Mean <> mean_F_step def
+prf 3197:3210 <> mean_rel_bound
+binder 3223:3223 <> g:48
+binder 3225:3226 <> ms:49
+binder 3228:3229 <> mu:50
+binder 3231:3234 <> mu_f:51
+R3277:3284 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3241:3250 Mean <> mean_rel_R ind
+R3253:3256 vcfloat.FPCore <> FT2R def
+R3258:3258 Mean <> g:48 var
+R3262:3264 Coq.Lists.List <> map def
+R3271:3272 Mean <> ms:49 var
+R3266:3269 vcfloat.FPCore <> FT2R def
+R3275:3276 Mean <> mu:50 var
+R3305:3312 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3285:3294 Mean <> mean_rel_F ind
+R3296:3296 Mean <> g:48 var
+R3298:3299 Mean <> ms:49 var
+R3301:3304 Mean <> mu_f:51 var
+R3334:3337 Coq.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R3313:3316 Coq.Reals.Rbasic_fun <> Rabs def
+R3321:3323 Coq.Reals.Rdefinitions <> ::R_scope:x_'-'_x not
+R3319:3320 Mean <> mu:50 var
+R3324:3327 vcfloat.FPCore <> FT2R def
+R3329:3332 Mean <> mu_f:51 var
+R3353:3355 Coq.Reals.Rdefinitions <> ::R_scope:x_'*'_x not
+R3338:3340 Coq.Reals.Raxioms <> INR def
+R3343:3348 Coq.Init.Datatypes <> length def
+R3350:3351 Mean <> ms:49 var
+R3356:3358 Mean <> WithNANS.ErrorAnalysis.eps var
+R3506:3516 Coq.Reals.RIneq <> Rminus_eq_0 thm
+R3519:3525 Coq.Reals.Rbasic_fun <> Rabs_R0 thm
+R3506:3516 Coq.Reals.RIneq <> Rminus_eq_0 thm
+R3506:3516 Coq.Reals.RIneq <> Rminus_eq_0 thm
+R3519:3525 Coq.Reals.Rbasic_fun <> Rabs_R0 thm
+R3519:3525 Coq.Reals.Rbasic_fun <> Rabs_R0 thm
+R3600:3605 Coq.Init.Datatypes <> length def
+R3608:3610 Coq.Lists.List <> map def
+R3612:3615 vcfloat.FPCore <> FT2R def
+R3628:3633 Coq.Init.Datatypes <> length def
+R3659:3668 Coq.Lists.List <> map_length thm
+R3600:3605 Coq.Init.Datatypes <> length def
+R3608:3610 Coq.Lists.List <> map def
+R3612:3615 vcfloat.FPCore <> FT2R def
+R3628:3633 Coq.Init.Datatypes <> length def
+R3659:3668 Coq.Lists.List <> map_length thm
+R3685:3690 Coq.Init.Datatypes <> length def
+R3694:3695 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R3716:3718 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
+R3707:3712 Coq.Init.Datatypes <> length def
+R3685:3690 Coq.Init.Datatypes <> length def
+R3694:3695 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R3716:3718 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
+R3707:3712 Coq.Init.Datatypes <> length def
+R3761:3768 Coq.Reals.RIneq <> plus_INR thm
+R3761:3768 Coq.Reals.RIneq <> plus_INR thm
+R3761:3768 Coq.Reals.RIneq <> plus_INR thm
+R3825:3827 Coq.Reals.Rdefinitions <> ::R_scope:x_'+'_x not
+R3804:3807 Coq.Reals.Rbasic_fun <> Rabs def
+R3812:3814 Coq.Reals.Rdefinitions <> ::R_scope:x_'-'_x not
+R3815:3818 vcfloat.FPCore <> FT2R def
+R3828:3830 Mean <> WithNANS.ErrorAnalysis.eps var
+R3788:3796 Coq.Reals.RIneq <> Rle_trans thm
+R3825:3827 Coq.Reals.Rdefinitions <> ::R_scope:x_'+'_x not
+R3804:3807 Coq.Reals.Rbasic_fun <> Rabs def
+R3812:3814 Coq.Reals.Rdefinitions <> ::R_scope:x_'-'_x not
+R3815:3818 vcfloat.FPCore <> FT2R def
+R3828:3830 Mean <> WithNANS.ErrorAnalysis.eps var
+R3788:3796 Coq.Reals.RIneq <> Rle_trans thm
+R3845:3859 Mean <> mean_step_bound prfax
+R3845:3859 Mean <> mean_step_bound prfax
+R3892:3908 Coq.Reals.RIneq <> Rplus_le_compat_r thm
+R3892:3908 Coq.Reals.RIneq <> Rplus_le_compat_r thm
+R3927:3929 Coq.Reals.Rdefinitions <> ::R_scope:x_'*'_x not
+R3924:3926 Mean <> WithNANS.ErrorAnalysis.eps var
+R3930:3932 Coq.Reals.Raxioms <> INR def
+R3935:3940 Coq.Init.Datatypes <> length def
+R3968:3970 Coq.Reals.Rdefinitions <> ::R_scope:x_'*'_x not
+R3953:3955 Coq.Reals.Raxioms <> INR def
+R3958:3963 Coq.Init.Datatypes <> length def
+R3971:3973 Mean <> WithNANS.ErrorAnalysis.eps var
+R3927:3929 Coq.Reals.Rdefinitions <> ::R_scope:x_'*'_x not
+R3924:3926 Mean <> WithNANS.ErrorAnalysis.eps var
+R3930:3932 Coq.Reals.Raxioms <> INR def
+R3935:3940 Coq.Init.Datatypes <> length def
+R3968:3970 Coq.Reals.Rdefinitions <> ::R_scope:x_'*'_x not
+R3953:3955 Coq.Reals.Raxioms <> INR def
+R3958:3963 Coq.Init.Datatypes <> length def
+R3971:3973 Mean <> WithNANS.ErrorAnalysis.eps var
+R4024:4036 Mean WithNANS.ErrorAnalysis <> sec
+R4044:4051 Mean WithNANS <> sec

@@ -1,0 +1,14 @@
+DIGEST e645c96ac702bb7c9478fb595f6016d2
+Fmean_error
+R28:33 vcfloat.FPLang <> <> lib
+R35:43 vcfloat.FPLangOpt <> <> lib
+R45:48 vcfloat.RAux <> <> lib
+R50:57 vcfloat.Rounding <> <> lib
+R59:63 vcfloat.Reify <> <> lib
+R65:79 vcfloat.Float_notations <> <> lib
+R81:88 vcfloat.Automate <> <> lib
+R106:120 Interval.Tactic <> <> lib
+R130:135 Flocq.IEEE754.Binary <> <> mod
+R145:148 Coq.Lists.List <> <> mod
+R150:162 Coq.Lists.List ListNotations <> mod
+R221:224 Mean <> <> lib
