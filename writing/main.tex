@@ -1,0 +1,119 @@
+\documentclass{llncs}
+\usepackage{tikz}
+\pagestyle{plain}
+
+\usepackage{hyperref}
+\newcommand{\vb}[1]{\textbf{#1}}
+\usepackage{graphicx}
+
+\usepackage{cite}
+
+\usepackage{wrapfig}
+
+%%%%%%%%%%%%%%%%%% codes %%%%%%%%%%%%%%
+
+
+\usepackage{listings}
+\usepackage{lstlangcoq}
+\lstset{language=Coq}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\lstset{basicstyle=\small	
+	\sffamily}
+
+
+%%%%%%%%%%%%%%%%% maths %%%%%%%%%%%%%%
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\newcommand{\nrm}{| \! |}
+\newcommand{\norm}[1]{\left| \! \left| #1 \right| \!\right|}
+\newcommand{\abs}[1]{\left| #1 \right| }
+\newcommand{\pa}[0]{\parallel}
+\newcommand{\R}{\mathbb{R}}
+
+%%%%%%%%%%%%%
+
+
+\title{Round-off error analysis for a simple cumulative average}
+
+
+\begin{document}
+
+\maketitle
+
+
+
+\section{Introduction}\label{sec:Introduction}
+This short paper details a naive round-off error analysis for a simple cumulative average (SCA). 
+
+\section{Problem Formulation} \label{sec:formulation}
+An informal description of the simple cumulative average is given as follows. 
+
+In a cumualtive average, we are concerned with computing the average of a sequence of $n$ values  $x_1, \cdot, x_{n}$  supposing that we already know the average of the sequence $x_1, \cdot, x_{n-1}$ and that the value $x_n$ has only just become known to us. 
+
+If $CA_{n-1}$ is the average of the sequence of values $x_1, \cdot, x_{n-1}$, then we can compute the average $A_n$ as
+\begin{align}\label{eq:avg}
+CA_{n} = CA_{n-1} + \frac{x_{n} - CA_{n-1}}{n}
+\end{align}
+
+We observe that there are strictly more floating-point operations associated with computing a cumulative average than with computing an average.  We are interested in deriving a practical upper bound on the forward absolute round-off error associated with such a computation, and showing that this bound holds for a specific C implementation of the SCA.  
+
+\section{Rounding Error Analysis}
+
+\subsection{Background}
+The standard model for floating-point error analysis represents the error in each operation between two exactly representable finite floating-point numbers $x$ and $y$ as  
+\begin{align}
+(x\  \texttt{op}_\mathbb{F} \ y) = (x \ \texttt{op}_\mathbb{R}\ y)(1 + \delta) + \epsilon
+\end{align}
+where $\epsilon$ and $\delta$ are small constants dendent on the precision of the computation.  
+
+\subsection{Model problem}
+
+We consider a simple model problem where we assume the following knowns: (1) the total number of values being averaged and (2) an absolute upper bound on the values being averaged. While assumption (1) should be removed in future analysis, we argue that (2)  is a reasonable assumption for most scientific and engineering domains where the values being averaged should represent some physical measurements. We also assume that all values being summed are exaclty representable in working-precision of the implementation. 
+
+If we define $CA_\mathbb{F} $ as the cumulative average carried out in floating-point arithmetic and $CA_\mathbb{R}$ as the cumulative average carried out in real arithmetic, then we would like to prove a bound of the form
+
+\begin{align}\label{eq:error}
+|CA_\mathbb{R} - CA_\mathbb{F}| \le \alpha \  n \  |CA_\mathbb{R}|
+\end{align}
+where $n$ is the number of values being averaged and $alpha$ is of order machine epsilon (\texttt{eps}). 
+
+For our model problem, we assume that we are computing the average of 10 elements, each element being positive and upper bounded by 10.
+
+\subsubsection{Functional models}
+In order to prove that equation (\ref{eq:error}) holds for a specific C implementation of the cumulative average, we define   \emph{functional models} in Coq that correspond to functional programs for computing the cumulative average in real arithmetic and floating-point arithmetic, and then prove that the C program correctly implements the floating-point functional model. 
+
+\begin{lstlisting}
+Inductive mean_rel_R (g : R) : list R -> R -> Prop :=
+| mean_rel_R_nil : mean_rel_R g [ ] g
+| mean_rel_R_cons : forall mu m ms,
+    mean_rel_R g ms mu ->
+    mean_rel_R g (m::ms) (mean_R_step mu m (INR (length ms))).
+\end{lstlisting}
+
+\begin{lstlisting}
+Inductive mean_rel_F (g : ftype Tsingle) : list (ftype Tsingle) -> ftype Tsingle -> Prop :=
+| mean_rel_F_nil : mean_rel_F g [ ] g
+| mean_rel_F_cons : forall mu m ms,
+    mean_rel_F g ms mu ->
+    mean_rel_F g (m::ms) (mean_F_step mu m (Zconst Tsingle (Z.of_nat (length ms)))).
+\end{lstlisting}
+
+
+\begin{lstlisting}
+Definition mean_R_step (mu m n: R) : R := mu + (m - mu) / (1 +  n).
+\end{lstlisting}
+
+\begin{lstlisting}
+Definition mean_F_step (mu m n: ftype Tsingle)  : ftype Tsingle :=
+  (mu + (m - mu) / (1 + n))%F32.
+\end{lstlisting}
+
+
+
+
+%\bibliographystyle{unsrt}
+ %\bibliography{bib.bib}
+
+
+\end{document}
