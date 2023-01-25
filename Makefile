@@ -1,22 +1,29 @@
-COQC=coqc
-COQDEP=coqdep
-VCFLOAT_LOC=../vcfloat/vcfloat
-COQFLAGS= -Q $(VCFLOAT_LOC) vcfloat
+# KNOWNTARGETS will not be passed along to CoqMakefile
+KNOWNTARGETS := CoqMakefile extra-stuff extra-stuff2
+# KNOWNFILES will not get implicit targets from the final rule, and so
+# depending on them won't invoke the submake
+# Warning: These files get declared as PHONY, so any targets depending
+# on them always get rebuilt
+KNOWNFILES   := Makefile _CoqProject
 
-all: Mean.vo  _CoqProject mean_error.vo 
+.DEFAULT_GOAL := invoke-coqmakefile
 
-_CoqProject: Makefile
-	echo $(COQFLAGS) >_CoqProject
+CoqMakefile: Makefile _CoqProject
+	$(COQBIN)coq_makefile -f _CoqProject -o CoqMakefile
 
-%.vo: %.v
-	$(COQC) $(COQFLAGS) $*.v
+invoke-coqmakefile: CoqMakefile
+	$(MAKE) --no-print-directory -f CoqMakefile $(filter-out $(KNOWNTARGETS),$(MAKECMDGOALS))
 
-depend: 
-	$(COQDEP) $(COQFLAGS) *.v > .depend
+.PHONY: invoke-coqmakefile $(KNOWNFILES)
 
+####################################################################
+##                      Your targets here                         ##
+####################################################################
 
-include .depend
+clean:
+	rm -f CoqMakefile CoqMakefile.conf
+	rm -f *.vo *.vos *.vok *.glob
 
-clean : 
-	rm -rf weight weight.v *.o *.glob *.vo *.vok *.vos .*.aux
-
+# This should be the last rule, to handle any targets not declared above
+%: invoke-coqmakefile
+	@true

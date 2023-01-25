@@ -1,10 +1,12 @@
-From vcfloat Require Import FPLang FPLangOpt RAux Rounding Reify Float_notations Automate.
-Require Import Interval.Tactic.
+Require Import List vcfloat.VCFloat.
+From vcfloat Require Import IEEE754_extra.
 Import Binary.
 Import List ListNotations.
 Set Bullet Behavior "Strict Subproofs".
 
 Require Import Mean.
+
+Import Interval.Tactic.
 
 Open Scope R_scope.
 
@@ -34,6 +36,8 @@ Lemma reflect_reify_s : forall s,
 Proof. reflexivity. Qed.
 
 Definition bmap_list len lb ub : list varinfo := 
+(* len: list length; lb: lower bound of elements in the list; ub : upper bound
+  of elements in the list *)
   [ Build_varinfo Tsingle _mu (lb + INR len * -1.2e-4) (ub + INR len * 1.2e-4) ;  
       Build_varinfo Tsingle _m lb ub ;
         Build_varinfo Tsingle _i 0 (INR len)].
@@ -373,7 +377,7 @@ Theorem FT2R_INR:
   FT2R (Zconst ty n) = IZR n.
 Proof.
 intros. 
-apply compcert.lib.IEEE754_extra.BofZ_exact.
+apply BofZ_exact.
 auto.
 Qed.
 
@@ -401,7 +405,7 @@ Lemma Zconst_finite:
   is_finite _ _ (Zconst ty n) = true.
 Proof.
 intros. 
-apply compcert.lib.IEEE754_extra.BofZ_exact.
+apply BofZ_exact.
 auto.
 Qed.
 

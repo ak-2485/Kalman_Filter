@@ -1,6 +1,7 @@
-From vcfloat Require Import FPLang FPLangOpt RAux Rounding Reify Float_notations Automate.
-Require Import IntervalFlocq3.Tactic.
-Import Binary Reals List ListNotations micromega.Lra.
+Require Import vcfloat.VCFloat.
+Import Binary Reals micromega.Lra.
+Require Import List.
+Import List ListNotations.
 Open Scope R_scope.
 
 Definition sum : list R -> R :=
